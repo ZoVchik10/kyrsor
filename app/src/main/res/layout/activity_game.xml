@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E2E"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Угадай число"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="от 1 до 100"
+            android:textSize="16sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Смайлик -->
+        <TextView
+            android:id="@+id/tvEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🤔"
+            android:textSize="80sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Кастомный термометр -->
+        <com.example.kyrsor.ThermometerView
+            android:id="@+id/thermometer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите число и нажмите «Проверить»"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ваше число"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Проверить"
+            android:textSize="18sp"
+            android:backgroundTint="#6C63FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAttempts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Попыток: 0"
+            android:textSize="18sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="История:"
+            android:textSize="16sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/historyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/history_bg"
+            android:padding="12dp"
+            android:minHeight="120dp"/>
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="В меню"
+            android:backgroundTint="#444444"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

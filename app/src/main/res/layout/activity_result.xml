@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#1E1E2E">
+
+    <!-- Большой смайлик -->
+    <TextView
+        android:id="@+id/tvResultEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉"
+        android:textSize="100sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/tvResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поздравляем!"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Карточка с результатами -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/history_bg"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Загаданное число:"
+            android:textSize="16sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvSecretNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="42"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="#6C63FF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#444444"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество попыток:"
+            android:textSize="16sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvAttemptsResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#FFEB3B"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#444444"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Рекорд -->
+        <LinearLayout
+            android:id="@+id/recordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Новый рекорд!"
+                android:textSize="20sp"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvBestRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Лучший результат: 5 попыток"
+                android:textSize="14sp"
+                android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Кнопки -->
+    <Button
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Играть снова"
+        android:textSize="18sp"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnRecords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Таблица рекордов"
+        android:textSize="18sp"
+        android:backgroundTint="#444444"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="В главное меню"
+        android:textSize="18sp"
+        android:backgroundTint="#333333"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
