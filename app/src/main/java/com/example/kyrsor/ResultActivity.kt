@@ -47,7 +47,6 @@ class ResultActivity : AppCompatActivity() {
         btnRecords = findViewById(R.id.btnRecords)
         btnMenu = findViewById(R.id.btnMenu)
     }
-
     private fun displayResults() {
         tvSecretNumber.text = secretNumber.toString()
         tvAttemptsResult.text = attempts.toString()
@@ -64,7 +63,6 @@ class ResultActivity : AppCompatActivity() {
             recordLayout.visibility = LinearLayout.GONE
         }
     }
-
     private fun setupListeners() {
         btnPlayAgain.setOnClickListener {
             // Возвращаемся в игру с тем же диапазоном
@@ -75,11 +73,9 @@ class ResultActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         btnRecords.setOnClickListener {
             startActivity(Intent(this, RecordsActivity::class.java))
         }
-
         btnMenu.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finishAffinity() // Закрываем все активности

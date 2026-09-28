@@ -17,18 +17,14 @@ class RecordsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_records)
-
         recordsContainer = findViewById(R.id.recordsContainer)
         tvNoRecords = findViewById(R.id.tvNoRecords)
         btnBack = findViewById(R.id.btnBack)
-
         loadRecords()
-
         btnBack.setOnClickListener {
             finish()
         }
     }
-
     private fun loadRecords() {
         val prefs = getSharedPreferences("records", Context.MODE_PRIVATE)
 
@@ -37,16 +33,13 @@ class RecordsActivity : AppCompatActivity() {
             "1-100" to "range_1_100",
             "1-200" to "range_1_200"
         )
-
         var hasRecords = false
-
         for ((rangeLabel, key) in ranges) {
             val record = prefs.getInt(key, Int.MAX_VALUE)
 
             if (record != Int.MAX_VALUE) {
                 hasRecords = true
 
-                // Создаем строку таблицы
                 val row = LinearLayout(this).apply {
                     orientation = LinearLayout.HORIZONTAL
                     setPadding(16, 16, 16, 16)
@@ -58,7 +51,6 @@ class RecordsActivity : AppCompatActivity() {
                         bottomMargin = 8
                     }
                 }
-
                 val tvRange = TextView(this).apply {
                     text = rangeLabel
                     textSize = 16f
@@ -79,7 +71,6 @@ class RecordsActivity : AppCompatActivity() {
                 recordsContainer.addView(row)
             }
         }
-
         if (!hasRecords) {
             tvNoRecords.visibility = android.view.View.VISIBLE
         }
