@@ -16,7 +16,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="32dp"/>
 
-    <!-- Заголовки таблицы -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +44,6 @@
             android:gravity="center"/>
     </LinearLayout>
 
-    <!-- Контейнер для записей -->
     <LinearLayout
         android:id="@+id/recordsContainer"
         android:layout_width="match_parent"

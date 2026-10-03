@@ -7,7 +7,6 @@
     android:padding="32dp"
     android:background="#1E1E2E">
 
-    <!-- Большой смайлик -->
     <TextView
         android:id="@+id/tvResultEmoji"
         android:layout_width="wrap_content"
@@ -16,7 +15,6 @@
         android:textSize="100sp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Заголовок -->
     <TextView
         android:id="@+id/tvResultTitle"
         android:layout_width="wrap_content"
@@ -27,7 +25,6 @@
         android:textColor="#4CAF50"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Карточка с результатами -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,7 +83,6 @@
             android:background="#444444"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Рекорд -->
         <LinearLayout
             android:id="@+id/recordLayout"
             android:layout_width="match_parent"
@@ -115,7 +111,6 @@
 
     </LinearLayout>
 
-    <!-- Кнопки -->
     <Button
         android:id="@+id/btnPlayAgain"
         android:layout_width="match_parent"
