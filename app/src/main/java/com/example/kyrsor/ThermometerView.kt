@@ -35,11 +35,9 @@ class ThermometerView @JvmOverloads constructor(
         val height = height.toFloat()
         val radius = height / 2
 
-        // Фон термометра
         rectF.set(0f, 0f, width, height)
         canvas.drawRoundRect(rectF, radius, radius, backgroundPaint)
 
-        // Градиентное заполнение
         val fillWidth = width * (progress / 100f)
         if (fillWidth > 0) {
             val gradient = LinearGradient(
@@ -59,7 +57,6 @@ class ThermometerView @JvmOverloads constructor(
             canvas.drawRoundRect(rectF, radius, radius, gradientPaint)
         }
 
-        // Рисуем метки (деления)
         paint.color = Color.WHITE
         paint.textSize = height * 0.4f
         paint.textAlign = Paint.Align.CENTER

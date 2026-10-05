@@ -30,7 +30,6 @@
             android:textColor="#AAAAAA"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Смайлик -->
         <TextView
             android:id="@+id/tvEmoji"
             android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
             android:textSize="80sp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Кастомный термометр -->
         <com.example.kyrsor.ThermometerView
             android:id="@+id/thermometer"
             android:layout_width="match_parent"

@@ -129,7 +129,6 @@ class GameActivity : AppCompatActivity() {
                 saveRecord()
                 isGameOver = true
                 btnCheck.isEnabled = false
-
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this, ResultActivity::class.java).apply {
                         putExtra("SECRET_NUMBER", secretNumber)
@@ -157,19 +156,15 @@ class GameActivity : AppCompatActivity() {
                 tvHint.setTextColor(Color.parseColor("#2196F3"))
             }
         }
-
         val direction = when {
             guess < secretNumber -> "↑ больше"
             guess > secretNumber -> "↓ меньше"
             else -> ""
         }
-
         val entry = "Попытка $attempts: $guess $direction"
         history.add(0, entry)
         updateHistory()
-
         animateEmoji()
-
         if (lastDistance != Int.MAX_VALUE) {
             val warmerOrColder = if (distance < lastDistance) " Теплее!" else "📉 Холоднее!"
             Toast.makeText(this, warmerOrColder, Toast.LENGTH_SHORT).show()

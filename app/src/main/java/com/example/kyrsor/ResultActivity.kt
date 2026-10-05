@@ -27,7 +27,6 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        // Получаем данные из GameActivity
         secretNumber = intent.getIntExtra("SECRET_NUMBER", 0)
         attempts = intent.getIntExtra("ATTEMPTS", 0)
         minRange = intent.getIntExtra("MIN_RANGE", 1)
@@ -47,12 +46,9 @@ class ResultActivity : AppCompatActivity() {
         btnRecords = findViewById(R.id.btnRecords)
         btnMenu = findViewById(R.id.btnMenu)
     }
-
     private fun displayResults() {
         tvSecretNumber.text = secretNumber.toString()
         tvAttemptsResult.text = attempts.toString()
-
-        // Проверяем рекорд
         val prefs = getSharedPreferences("records", Context.MODE_PRIVATE)
         val key = "range_${minRange}_${maxRange}"
         val best = prefs.getInt(key, Int.MAX_VALUE)
@@ -64,10 +60,8 @@ class ResultActivity : AppCompatActivity() {
             recordLayout.visibility = LinearLayout.GONE
         }
     }
-
     private fun setupListeners() {
         btnPlayAgain.setOnClickListener {
-            // Возвращаемся в игру с тем же диапазоном
             val intent = Intent(this, GameActivity::class.java).apply {
                 putExtra("MIN_RANGE", minRange)
                 putExtra("MAX_RANGE", maxRange)
@@ -75,14 +69,12 @@ class ResultActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         btnRecords.setOnClickListener {
             startActivity(Intent(this, RecordsActivity::class.java))
         }
-
         btnMenu.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
-            finishAffinity() // Закрываем все активности
+            finishAffinity()
         }
     }
 }
