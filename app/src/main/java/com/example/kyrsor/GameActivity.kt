@@ -141,7 +141,7 @@ class GameActivity : AppCompatActivity() {
                     finish()
                 }, 1500)
             }
-            distance <= rangeSize * 0.1 -> {
+            distance <= rangeSize * 0.08 -> {
                 tvEmoji.text = "🔥"
                 tvHint.text = "Горячо! Очень близко!"
                 tvHint.setTextColor(Color.parseColor("#F44336"))
@@ -152,7 +152,7 @@ class GameActivity : AppCompatActivity() {
                 tvHint.setTextColor(Color.parseColor("#FFEB3B"))
             }
             else -> {
-                tvEmoji.text = ""
+                tvEmoji.text = "❄"
                 tvHint.text = "Холодно! Очень далеко"
                 tvHint.setTextColor(Color.parseColor("#2196F3"))
             }
